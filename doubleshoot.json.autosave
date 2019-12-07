@@ -126,24 +126,6 @@
         "name": "images\\RedCircle2.png",
         "smoothed": true,
         "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "images/RedCircle0.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images\\RedCircle0.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "images/BlueCircle0.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images\\BlueCircle0.png",
-        "smoothed": true,
-        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -176,7 +158,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.727
+        "zoomFactor": 0.9894
       },
       "objectsGroups": [],
       "variables": [],
@@ -189,8 +171,8 @@
           "locked": false,
           "name": "ShootPoint_Left",
           "width": 0,
-          "x": -5,
-          "y": 194,
+          "x": 51,
+          "y": 277,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -204,8 +186,8 @@
           "locked": false,
           "name": "ShootPoint_Right",
           "width": 0,
-          "x": 558,
-          "y": 188,
+          "x": 209,
+          "y": 83,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -256,7 +238,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images\\BlueCircle0.png",
+                      "image": "laugh1_24055.jpg",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -300,12 +282,29 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "looping": true,
+                  "timeBetweenFrames": 0.39,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images\\RedCircle0.png",
+                      "image": "images\\RedCircle.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "images\\RedCircle2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -321,6 +320,17 @@
                       "customCollisionMask": []
                     }
                   ]
+                }
+              ]
+            },
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": []
                 }
               ]
             }

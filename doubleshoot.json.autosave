@@ -13,7 +13,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "C:\\Users\\Lennart\\Documents\\DoubleShoot\\DoubleShoot\\doubleshoot.json",
+    "projectFile": "/Users/vincent/Ideen/DoubleShoot/DoubleShoot/doubleshoot.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -126,6 +126,33 @@
         "name": "images\\RedCircle2.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/RedCircle0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\RedCircle0.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/BlueCircle0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\BlueCircle0.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/BlueCircle0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images/BlueCircle0.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -158,7 +185,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.9894
+        "zoomFactor": 0.727
       },
       "objectsGroups": [],
       "variables": [],
@@ -171,8 +198,8 @@
           "locked": false,
           "name": "ShootPoint_Left",
           "width": 0,
-          "x": 51,
-          "y": 277,
+          "x": -5,
+          "y": 194,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -186,8 +213,8 @@
           "locked": false,
           "name": "ShootPoint_Right",
           "width": 0,
-          "x": 209,
-          "y": 83,
+          "x": 558,
+          "y": 188,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -204,6 +231,21 @@
           "x": 109,
           "y": 37,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "AimingPoint_Left",
+          "width": 0,
+          "x": -4,
+          "y": 194,
+          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -238,7 +280,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "laugh1_24055.jpg",
+                      "image": "images\\BlueCircle0.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -282,29 +324,12 @@
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": true,
-                  "timeBetweenFrames": 0.39,
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images\\RedCircle.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "images\\RedCircle2.png",
+                      "image": "images\\RedCircle0.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -320,17 +345,6 @@
                       "customCollisionMask": []
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": []
                 }
               ]
             }
@@ -354,6 +368,55 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "name": "AimingPoint_Left",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "Start_Zeit",
+              "value": "1"
+            }
+          ],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "images/BlueCircle0.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -402,6 +465,133 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "AimingPoint_Left",
+                "Start_Zeit",
+                "=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectPositionYTween"
+              },
+              "parameters": [
+                "AimingPoint_Left",
+                "Tween",
+                "WindowTitle()",
+                "450",
+                "\"easeInSine\"",
+                "100",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeScale"
+              },
+              "parameters": [
+                "AimingPoint_Left",
+                "=",
+                "0.2"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosY"
+              },
+              "parameters": [
+                "AimingPoint_Left",
+                "<",
+                "50"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectPositionYTween"
+              },
+              "parameters": [
+                "AimingPoint_Left",
+                "Tween",
+                "WindowTitle()",
+                "450",
+                "\"easeInSine\"",
+                "500\n\n",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosY"
+              },
+              "parameters": [
+                "AimingPoint_Left",
+                ">",
+                "448"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectPositionYTween"
+              },
+              "parameters": [
+                "AimingPoint_Left",
+                "Tween",
+                "WindowTitle()",
+                "48\n",
+                "\"easeInSine\"",
+                "500\n",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
@@ -427,6 +617,10 @@
         {
           "name": "Anchor",
           "type": "AnchorBehavior::AnchorBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ]
     }

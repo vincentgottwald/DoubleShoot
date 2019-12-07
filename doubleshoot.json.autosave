@@ -134,78 +134,8 @@
       },
       "objectsGroups": [],
       "variables": [],
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "ShootPoint_Left",
-          "width": 0,
-          "x": 51,
-          "y": 277,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "ShootPoint_Right",
-          "width": 0,
-          "x": 695,
-          "y": 282,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        }
-      ],
-      "objects": [
-        {
-          "name": "ShootPoint_Right",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [
-            {
-              "name": "Anchor",
-              "type": "AnchorBehavior::AnchorBehavior",
-              "bottomEdgeAnchor": 0,
-              "leftEdgeAnchor": 0,
-              "relativeToOriginalWindowSize": true,
-              "rightEdgeAnchor": 0,
-              "topEdgeAnchor": 0
-            }
-          ],
-          "animations": []
-        },
-        {
-          "name": "ShootPoint_Left",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [
-            {
-              "bottomEdgeAnchor": 0,
-              "leftEdgeAnchor": 0,
-              "name": "Anchor",
-              "relativeToOriginalWindowSize": true,
-              "rightEdgeAnchor": 0,
-              "topEdgeAnchor": 0,
-              "type": "AnchorBehavior::AnchorBehavior"
-            }
-          ],
-          "animations": []
-        }
-      ],
+      "instances": [],
+      "objects": [],
       "events": [],
       "layers": [
         {
@@ -226,12 +156,7 @@
           "effects": []
         }
       ],
-      "behaviorsSharedData": [
-        {
-          "name": "Anchor",
-          "type": "AnchorBehavior::AnchorBehavior"
-        }
-      ]
+      "behaviorsSharedData": []
     }
   ],
   "externalEvents": [],

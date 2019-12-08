@@ -13,7 +13,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "C:\\Users\\Lennart\\Documents\\DoubleShoot\\DoubleShoot\\doubleshoot.json",
+    "projectFile": "/Users/vincent/Ideen/DoubleShoot/DoubleShoot/doubleshoot.json.autosave",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -156,6 +156,15 @@
       },
       {
         "alwaysLoaded": false,
+        "file": "images/BackgroundGrey.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\BackgroundGrey.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
         "file": "images/Life.png",
         "kind": "image",
         "metadata": "",
@@ -171,42 +180,6 @@
         "name": "images/Life.png",
         "smoothed": true,
         "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "images/BackgroundGrey.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images\\BackgroundGrey.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "BackgroundBlue-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "BackgroundBlue-1.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "images/BackgroundBlue.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images\\BackgroundBlue.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "images/Button.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "images\\Button.png",
-        "smoothed": true,
-        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -257,14 +230,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 150,
+          "height": 100,
           "layer": "",
           "locked": false,
           "name": "ShootPoint_Left",
-          "width": 150,
+          "width": 100,
           "x": 20,
           "y": 490,
-          "zOrder": 99,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -272,18 +245,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 150,
+          "height": 100,
           "layer": "",
           "locked": false,
           "name": "ShootPoint_Right",
-          "width": 150,
-          "x": 1750,
+          "width": 100,
+          "x": 1800,
           "y": 490,
-<<<<<<< HEAD
           "zOrder": 2,
-=======
-          "zOrder": 98,
->>>>>>> origin/master
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -325,12 +294,12 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 80,
+          "customSize": false,
+          "height": 0,
           "layer": "",
           "locked": false,
           "name": "Moving_Point_Left",
-          "width": 80,
+          "width": 0,
           "x": 31,
           "y": 902,
           "zOrder": 6,
@@ -340,18 +309,13 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 80,
+          "customSize": false,
+          "height": 0,
           "layer": "",
           "locked": false,
           "name": "Moving_Point_Right",
-<<<<<<< HEAD
           "width": 0,
           "x": 1800,
-=======
-          "width": 80,
-          "x": 1711,
->>>>>>> origin/master
           "y": 99,
           "zOrder": 7,
           "numberProperties": [],
@@ -388,7 +352,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images\\Button.png",
+                      "image": "images\\BlueCircle0.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -437,7 +401,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images\\Button.png",
+                      "image": "images\\RedCircle0.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -459,10 +423,29 @@
           ]
         },
         {
+          "bold": false,
+          "italic": false,
+          "name": "Text",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "Text",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        },
+        {
           "height": 32,
           "name": "Background",
           "tags": "",
-          "texture": "images\\BackgroundBlue.png",
+          "texture": "images\\BackgroundGrey.png",
           "type": "TiledSpriteObject::TiledSprite",
           "width": 32,
           "variables": [],
@@ -530,7 +513,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images\\RedCircle0.png",
+                      "image": "images/Life.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -574,7 +557,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images\\BlueCircle0.png",
+                      "image": "images/Life.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",

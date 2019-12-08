@@ -199,6 +199,14 @@
     {
       "name": "Life_links",
       "value": "0"
+    },
+    {
+      "name": "Life_rechts",
+      "value": "0"
+    },
+    {
+      "name": "PunkteStart",
+      "value": "0"
     }
   ],
   "layouts": [
@@ -357,6 +365,21 @@
           "x": 627,
           "y": 667,
           "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "Text",
+          "width": 0,
+          "x": 510,
+          "y": 182,
+          "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -675,26 +698,117 @@
                 "value": "ModVarGlobal"
               },
               "parameters": [
-                "Life_links",
+                "Life_rechts",
                 "=",
-                "300 - Moving_Point_Right.Distance(ShootPoint_Right)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeWidth"
-              },
-              "parameters": [
-                "Health_Left",
-                "-",
-                "GlobalVariable(Life_links)"
+                "Moving_Point_Right.Distance(ShootPoint_Right)"
               ],
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "Life_links",
+                    "<",
+                    "20"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "Health_Left",
+                    "-",
+                    "10*GlobalVariable(Life_rechts)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "Life_rechts",
+                    "<",
+                    "50"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "Health_Left",
+                    "-",
+                    "2*GlobalVariable(Life_rechts)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "Life_rechts",
+                    ">",
+                    "50"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "Health_Left",
+                    "+",
+                    "GlobalVariable(Life_rechts)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
@@ -735,24 +849,127 @@
               "parameters": [
                 "Life_links",
                 "=",
-                "300 - Moving_Point_Left.Distance(ShootPoint_Left)"
+                "Moving_Point_Left.Distance(ShootPoint_Left)"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "ChangeWidth"
+                "value": "TextObject::String"
               },
               "parameters": [
-                "Health_Left",
-                "+",
-                "GlobalVariable(Life_links)"
+                "Text",
+                "=",
+                "GlobalVariableString(Life_links)"
               ],
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "Life_links",
+                    "<",
+                    "20"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "Health_Left",
+                    "+",
+                    "10*GlobalVariable(Life_links)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "Life_links",
+                    "<",
+                    "50"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "Health_Left",
+                    "+",
+                    "2*GlobalVariable(Life_links)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "Life_links",
+                    ">",
+                    "50"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "Health_Left",
+                    "-",
+                    "GlobalVariable(Life_links)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
@@ -910,6 +1127,7 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
+<<<<<<< HEAD
           "conditions": [
             {
               "type": {
@@ -1110,6 +1328,10 @@
               "subInstructions": []
             }
           ],
+=======
+          "conditions": [],
+          "actions": [],
+>>>>>>> 5978e9ef0e51bb476030fdf5bb77515be88eaf5d
           "events": []
         }
       ],

@@ -13,7 +13,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "/Users/vincent/Ideen/DoubleShoot/DoubleShoot/doubleshoot.json.autosave",
+    "projectFile": "C:\\Users\\Lennart\\Documents\\DoubleShoot\\DoubleShoot\\doubleshoot.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -180,6 +180,15 @@
         "name": "images/Life.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/Button.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\Button.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -230,11 +239,11 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 100,
+          "height": 150,
           "layer": "",
           "locked": false,
           "name": "ShootPoint_Left",
-          "width": 100,
+          "width": 150,
           "x": 20,
           "y": 490,
           "zOrder": 1,
@@ -245,12 +254,12 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 100,
+          "height": 150,
           "layer": "",
           "locked": false,
           "name": "ShootPoint_Right",
-          "width": 100,
-          "x": 1800,
+          "width": 150,
+          "x": 1750,
           "y": 490,
           "zOrder": 2,
           "numberProperties": [],
@@ -294,13 +303,13 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 100,
           "layer": "",
           "locked": false,
           "name": "Moving_Point_Left",
-          "width": 0,
-          "x": 31,
+          "width": 100,
+          "x": 45,
           "y": 902,
           "zOrder": 6,
           "numberProperties": [],
@@ -309,13 +318,13 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 100,
           "layer": "",
           "locked": false,
           "name": "Moving_Point_Right",
-          "width": 0,
-          "x": 1800,
+          "width": 100,
+          "x": 1775,
           "y": 99,
           "zOrder": 7,
           "numberProperties": [],
@@ -352,7 +361,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images\\BlueCircle0.png",
+                      "image": "images\\Button.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -401,7 +410,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images\\RedCircle0.png",
+                      "image": "images\\Button.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -513,7 +522,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images/Life.png",
+                      "image": "images\\RedCircle0.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -557,7 +566,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "images/Life.png",
+                      "image": "images\\BlueCircle0.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",

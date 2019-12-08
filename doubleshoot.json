@@ -22,8 +22,8 @@
     "winExecutableIconFile": "",
     "name": "DoubleShoot",
     "author": "",
-    "windowWidth": 800,
-    "windowHeight": 600,
+    "windowWidth": 1920,
+    "windowHeight": 1080,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
     "minFPS": 25,
@@ -144,6 +144,33 @@
         "name": "images\\BlueCircle0.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewFile-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewFile-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/BackgroundGrey.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\BackgroundGrey.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "images/Life.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "images\\Life.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -176,21 +203,21 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.727
+        "zoomFactor": 0.526
       },
       "objectsGroups": [],
       "variables": [],
       "instances": [
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 100,
           "layer": "",
           "locked": false,
           "name": "ShootPoint_Left",
-          "width": 0,
-          "x": -5,
-          "y": 194,
+          "width": 100,
+          "x": 20,
+          "y": 250,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -198,14 +225,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 100,
           "layer": "",
           "locked": false,
           "name": "ShootPoint_Right",
-          "width": 0,
-          "x": 558,
-          "y": 188,
+          "width": 100,
+          "x": 680,
+          "y": 250,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -222,6 +249,41 @@
           "x": 109,
           "y": 37,
           "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 1080,
+          "layer": "",
+          "locked": false,
+          "name": "Background",
+          "width": 1920,
+          "x": 0,
+          "y": 0,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "Life_Left",
+              "value": "100"
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 200,
+          "layer": "",
+          "locked": false,
+          "name": "Health_Left",
+          "width": 20,
+          "x": 277,
+          "y": 177,
+          "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -344,6 +406,55 @@
             "g": 0,
             "r": 0
           }
+        },
+        {
+          "height": 32,
+          "name": "Background",
+          "tags": "",
+          "texture": "images\\BackgroundGrey.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "behaviors": []
+        },
+        {
+          "name": "Health_Left",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "images\\Life.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -384,9 +495,9 @@
                 "value": "ChangeHeight"
               },
               "parameters": [
-                "ShootPoint_Right",
-                "=",
-                "100\n"
+                "Health_Left",
+                "-",
+                "10"
               ],
               "subInstructions": []
             }

@@ -13,7 +13,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "/Users/vincent/Ideen/DoubleShoot/DoubleShoot/doubleshoot.json.autosave",
+    "projectFile": "C:\\Users\\Lennart\\Documents\\DoubleShoot\\DoubleShoot\\doubleshoot.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -203,7 +203,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.5
+        "zoomFactor": 0.526
       },
       "objectsGroups": [],
       "variables": [],
@@ -217,7 +217,7 @@
           "name": "ShootPoint_Left",
           "width": 100,
           "x": 20,
-          "y": 250,
+          "y": 490,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -231,8 +231,8 @@
           "locked": false,
           "name": "ShootPoint_Right",
           "width": 100,
-          "x": 680,
-          "y": 250,
+          "x": 1800,
+          "y": 490,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -276,14 +276,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 200,
+          "height": 1080,
           "layer": "",
           "locked": false,
           "name": "Health_Left",
-          "width": 20,
-          "x": 277,
-          "y": 177,
-          "zOrder": 5,
+          "width": 960,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -479,7 +479,7 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SourisBouton"
+                "value": "MouseButtonReleased"
               },
               "parameters": [
                 "",
@@ -492,12 +492,58 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ChangeHeight"
+                "value": "ChangeWidth"
               },
               "parameters": [
                 "Health_Left",
                 "-",
-                "10"
+                "120"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "ShootPoint_Left",
+                "Left",
+                "yes",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeWidth"
+              },
+              "parameters": [
+                "Health_Left",
+                "+",
+                "120"
               ],
               "subInstructions": []
             }
